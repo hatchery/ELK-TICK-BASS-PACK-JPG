@@ -1,0 +1,22 @@
+version: "2"
+services:
+  grafana:
+    build: ./Dockerfile.grafana
+  elasticsearch:
+    build: ./Dockerfile.elasticsearch-watcher
+  logstash:
+    build: ./Dockerfile.logstash
+  kafka:
+    build: ./Dockerfile.kafka-zookeeper
+  kibana:
+    build: ./Dockerfile.kibana
+  telegraf:
+    build: ./Dockerfile.telegraf
+  influxdb:
+    build: ./Dockerfile.influxdb
+  chronograf:
+    build: ./Dockerfile.chronograf
+  kapacitor:
+    build: ./Dockerfile.kapacitor
+  statsite:
+    build: ./Dockerfile.statsite
