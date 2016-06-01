@@ -18,5 +18,5 @@ services:
     build: ./Dockerfile.chronograf
   kapacitor:
     build: ./Dockerfile.kapacitor
-  statsite:
-    build: ./Dockerfile.statsite
+  prometheus:
+    build: ./Dockerfile.prometheus
