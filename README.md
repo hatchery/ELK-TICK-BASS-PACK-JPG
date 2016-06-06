@@ -4,8 +4,8 @@ This is a joke, but totally serious.
 
 - G - Grafana:
     * A dashboard visualization tool
-- G - Grafana again
-    * The initialism was better with 2, but it's also that good
+- G - Graphite
+    * An archival time-series database system to be used for historic data with fall off
 - W - Watcher
     * Elasticsearch watcher to notify you of anomalies
 - P - Prometheus
