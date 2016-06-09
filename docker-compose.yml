@@ -3,8 +3,10 @@ services:
 
   grafana:
     image: grafana/grafana:latest
-    depends_on: grafana-storage
-    volumes_from: grafana-storage:rw
+    depends_on:
+      - grafana-storage
+    volumes_from:
+      - grafana-storage:rw
 
   grafana-storage:
     image: busybox:latest
@@ -15,8 +17,10 @@ services:
 
   prometheus:
     image: prom/prometheus:latest
-    depends_on: prometheus-storage
-    volumes_from: prometheus-storage:rw
+    depends_on:
+      - prometheus-storage
+    volumes_from:
+      - prometheus-storage:rw
   
   prometheus-storage:
     image: busybox:latest
@@ -26,39 +30,42 @@ services:
 
   
   elasticsearch:
-    build: ./Dockerfile.elasticsearch-watcher
+    image: elasticsearch:latest
 
 
+
+  logstash-to-kafka:
+    image: logstash:latest
   
-  logstash:
-    build: ./Dockerfile.logstash
+  logstash-to-elasticsearch:
+    image: logstash:latest
 
 
   
   kafka:
-    build: ./Dockerfile.kafka-zookeeper
+    image: spotify/kafka:latest
 
 
   
   kibana:
-    build: ./Dockerfile.kibana
+    image: kibana:latest
 
 
   
   telegraf:
-    build: ./Dockerfile.telegraf
+    image: telegraf:alpine
 
 
   
   influxdb:
-    build: ./Dockerfile.influxdb
+    image: influxdb:alpine
 
 
   
   chronograf:
-    build: ./Dockerfile.chronograf
+    image: chronograf:latest
 
 
   
   kapacitor:
-    build: ./Dockerfile.kapacitor
+    image: kapacitor:alpine
