@@ -1,22 +1,64 @@
 version: "2"
 services:
+
   grafana:
-    build: ./Dockerfile.grafana
+    image: grafana/grafana:latest
+    depends_on: grafana-storage
+    volumes_from: grafana-storage:rw
+
+  grafana-storage:
+    image: busybox:latest
+    volumes:
+      - /var/lib/grafana
+      
+
+
+  prometheus:
+    image: prom/prometheus:latest
+    depends_on: prometheus-storage
+    volumes_from: prometheus-storage:rw
+  
+  prometheus-storage:
+    image: busybox:latest
+    volumes:
+      - /var/lib/prometheus
+
+
+  
   elasticsearch:
     build: ./Dockerfile.elasticsearch-watcher
+
+
+  
   logstash:
     build: ./Dockerfile.logstash
+
+
+  
   kafka:
     build: ./Dockerfile.kafka-zookeeper
+
+
+  
   kibana:
     build: ./Dockerfile.kibana
+
+
+  
   telegraf:
     build: ./Dockerfile.telegraf
+
+
+  
   influxdb:
     build: ./Dockerfile.influxdb
+
+
+  
   chronograf:
     build: ./Dockerfile.chronograf
+
+
+  
   kapacitor:
     build: ./Dockerfile.kapacitor
-  prometheus:
-    build: ./Dockerfile.prometheus
