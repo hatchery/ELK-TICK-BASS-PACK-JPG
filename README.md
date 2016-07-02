@@ -1,4 +1,4 @@
-# GGWP-ELKKTICK
+# GGWP-ELKK-TICKZ
 Logging Pipeline and Chief.
 This is a joke, but totally serious.
 
@@ -26,6 +26,7 @@ This is a joke, but totally serious.
     * A query creation and data discovery system for influxdb and prometheus
 - K - Kapacitor
     * An anomaly detection system for InfluxDB
-
+- Z - Zipkin
+    * A tracing system for parallel and interconnected-system calls
 
 Clearly a system for collecting all data in all ways and keeping it forever and ever.
