@@ -1,4 +1,4 @@
-# GGWP-ELKK-TICKZ
+# GGWP-ELKKS-TICKZ
 Logging Pipeline and Chief.
 This is a joke, but totally serious.
 
@@ -18,6 +18,8 @@ This is a joke, but totally serious.
     * A distributed pub/sub message queue for passing data through federated logstash systems into a logstash collector
 - K - Kibana
     * A data visualization and discovery system for elasticsearch
+- S - Sentry
+    * A crash and exception monitoring system
 - T - Telegraf
     * A data collection instrument for Influx and Prometheus
 - I - InfluxDB
