@@ -44,7 +44,7 @@ This is a joke, but totally serious.
 - K - Kafka
     * A distributed message queue for scaling log injestion across a number of interconnected systems to reduce the external call traffic of your servers.
 
---
+---
 
 - J - Jaeger
     * A distributed tracing visualizer, adhering to the opentracing standard.
