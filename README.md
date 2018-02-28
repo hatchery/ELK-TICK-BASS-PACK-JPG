@@ -1,25 +1,16 @@
-# GGWP-ELKKS-TICKZ
+# ELK-TICK-BASS-PACK-JPG
 Logging Pipeline and Chief.
 This is a joke, but totally serious.
 
-- G - Grafana:
-    * A dashboard visualization tool
-- G - Grafana:
-    * It made the acronym better to repeat. It's also going to be the workhorse in this stack!
-- W - Watcher
-    * Elasticsearch watcher to notify you of anomalies
-- P - Prometheus
-    * A time series metrics client/server system
 - E - Elasticsearch
-    * A full-text search-oriented data store
+    * A full-text search-oriented data store. To be used for searching log files and maintaining a working-set of logs.
 - L - Logstash
-    * A structured log collection daemon
-- K - Kafka
-    * A distributed pub/sub message queue for passing data through federated logstash systems into a logstash collector
+    * A structured log collection daemon. For groking, parsing and injesting log files.
 - K - Kibana
     * A data visualization and discovery system for elasticsearch
-- S - Sentry
-    * A crash and exception monitoring system
+
+---
+
 - T - Telegraf
     * A data collection instrument for Influx and Prometheus
 - I - InfluxDB
@@ -28,7 +19,26 @@ This is a joke, but totally serious.
     * A query creation and data discovery system for influxdb and prometheus
 - K - Kapacitor
     * An anomaly detection system for InfluxDB
-- Z - Zipkin
-    * A tracing system for parallel and interconnected-system calls
+
+---
+
+- B - Beats
+    * Lightweight data shippers for metrics and log files.
+- A - AuthProxy
+- S - Statsite
+- S - Sentry
+
+---
+
+- P - PushGateway
+- A - AlertManager
+- C - CollectD
+- K - Kafka
+
+--
+
+- J - Jaeger
+- P - Prometheus
+- G - Grafana
 
 Clearly a system for collecting all data in all ways and keeping it forever and ever.
