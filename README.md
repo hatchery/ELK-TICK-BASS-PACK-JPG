@@ -39,8 +39,8 @@ This is a joke, but totally serious.
     * A prometheus injestion service for clients who implement the prometheus metric format but are short-lived and need a place to export.
 - A - AlertManager
     * A prometheus alerting system and anomaly detection system.
-- C - CollectD
-    * A dynamic metrics and log exfiltration daemon to cover any places which beats and telegraf do not export well.
+- C - Cortex (Weaveworks)
+    * A scalable prometheus backend for use of long term metric collection.
 - K - Kafka
     * A distributed message queue for scaling log injestion across a number of interconnected systems to reduce the external call traffic of your servers.
 
